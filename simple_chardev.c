@@ -13,27 +13,29 @@ MODULE_DESCRIPTION("simple chardev example");
 ssize_t ext0_file_read (struct file * pfile, char __user *buffer, size_t lenght, loff_t * offset)
 {
 
-	printk (KERN_INFO "Inside the ext0_file_read \r\n");
+	printk (KERN_INFO "Inside the Function: %s \r\n", __FUNCTION__);
 	return lenght;
 }
 
 ssize_t ext0_file_write (struct file * pfile, const char __user * buffer, size_t lenght, loff_t * offset)
 {
 
-	printk (KERN_INFO "Inside ext0_file_write \r\n");
+	printk (KERN_INFO "Inside the Function: %s \r\n", __FUNCTION__);
 	return lenght;
 }
 
 int ext0_file_open (struct inode * pnode, struct file * pfile)
 {
 	
-	printk (KERN_INFO "Inside ext0_file_open \r\n");
+	printk (KERN_INFO "Inside the Function: %s \r\n", __FUNCTION__);
+	return 0;
 }
 
 int ext0_file_release (struct inode * pnode, struct file * pfile)
 {
 
-	printk (KERN_INFO "Inside the ext0_file_release \r\n");
+	printk (KERN_INFO "Inside the function: %s \r\n", __FUNCTION__);
+	return 0;
 
 }
 
